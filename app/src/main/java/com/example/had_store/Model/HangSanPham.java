@@ -7,6 +7,12 @@ public class HangSanPham {
     private String anhHang;
 
 
+    public HangSanPham(String tenHang, String diaChiHang, String anhHang) {
+        this.tenHang = tenHang;
+        this.diaChiHang = diaChiHang;
+        this.anhHang = anhHang;
+    }
+
     @Override
     public String toString() {
         return "HangSanPham{" +

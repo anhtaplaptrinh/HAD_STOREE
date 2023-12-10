@@ -7,6 +7,16 @@ public class SanPham {
     public SanPham() {
     }
 
+    public SanPham(int maHang, int giaSp, int soLuongSp, String tenSp, String anhSp, String ttSp, String mota) {
+        this.maHang = maHang;
+        this.giaSp = giaSp;
+        this.soLuongSp = soLuongSp;
+        this.tenSp = tenSp;
+        this.anhSp = anhSp;
+        this.ttSp = ttSp;
+        this.mota = mota;
+    }
+
     public SanPham(int masp, int maHang, int giaSp, int soLuongSp, String tenSp, String anhSp, String ttSp, String mota) {
         this.masp = masp;
         this.maHang = maHang;

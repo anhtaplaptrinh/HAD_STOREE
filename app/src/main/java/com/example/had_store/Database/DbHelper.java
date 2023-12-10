@@ -5,8 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
-    static final String dbName = "Hqwewqe";
-    static  final  int dbVersion=16;
+    static final String dbName = "Hqwu";
+    static  final  int dbVersion=31;
     public DbHelper(Context context){ super(context,dbName,null,dbVersion);}
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
@@ -18,7 +18,12 @@ public class DbHelper extends SQLiteOpenHelper {
                 "emailNv TEXT not null," +
                 "anhNv text not null)");
         sqLiteDatabase.execSQL("insert into NhanVien values " +
-                "('NV01','Nguyễn Tuấn ','123',0366691234,'dungntph@fpt.edu.vn','https://i.pinimg.com/236x/74/20/58/742058099ee4749d2da5d820396870eb.jpg')");
+                "('NV01','Nguyễn Tuấn ','123',0366691234,'dungntph@fpt.edu.vn','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYjtgg39whpZmugBXYoTbp296AqxVA3yzuw&usqp=CAU')," +
+                "('NV02','Cao Hoàng','123',0366691234,'dungntph@fpt.edu.vn','https://afamilycdn.com/150157425591193600/2022/8/23/299980243-2045230712333844-1983650452575958652-n-3730-1661222602446-16612226025621952261667.jpeg')," +
+                "('NV03','Tuấn Anh ','123',0366691234,'dungntph@fpt.edu.vn','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjoyF0mcOPxktb_6WpDO84CsHyXT0a_0HQg&usqp=CAU')," +
+                "('NV04','Nguyễn Tuấn ','123',0366691234,'dungntph@fpt.edu.vn','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTllYr56xg6PDvJCwRevKDgz1xBxYVAX_Zw&usqp=CAU')," +
+                "('NV05','Nguyễn Tuấn ','123',0366691234,'dungntph@fpt.edu.vn','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDw7Aw1I-FC4KkJzqHiON1gSeKVb54XzwRw&usqp=CAU')" +
+                "");
 
         sqLiteDatabase.execSQL("create table KhachHang (" +
                 "maKh text primary key," +
@@ -29,8 +34,12 @@ public class DbHelper extends SQLiteOpenHelper {
                 "diaChiKh TEXT not null," +
                 "anhKh text not null)");
         sqLiteDatabase.execSQL("insert into KhachHang values " +
-                "('KH01','Nguyễn Dũng','123',0366691234,'dungnt67@fpt.edu.vn','Nho Quan - Ninh Binh','lnkanh')," +
-                "('KH02','Dung Tuan','123',0366691234,'wqeeer7@fpt.edu.vn','Dong Da - Ha Noi','lnkanh')");
+                "('KH01','Nguyễn Tuấn ','123',0366691234,'dungntph@fpt.edu.vn','Hn','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYjtgg39whpZmugBXYoTbp296AqxVA3yzuw&usqp=CAU')," +
+                "('KH02','Cao Hoàng','123',0366691234,'dungntph@fpt.edu.vn','Hn','https://afamilycdn.com/150157425591193600/2022/8/23/299980243-2045230712333844-1983650452575958652-n-3730-1661222602446-16612226025621952261667.jpeg')," +
+                "('KH03','Tuấn Anh ','123',0366691234,'dungntph@fpt.edu.vn','Hn','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjoyF0mcOPxktb_6WpDO84CsHyXT0a_0HQg&usqp=CAU')," +
+                "('KH04','Nguyễn Tuấn ','123',0366691234,'dungntph@fpt.edu.vn','Hn','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTllYr56xg6PDvJCwRevKDgz1xBxYVAX_Zw&usqp=CAU')," +
+                "('KH05','Nguyễn Tuấn ','123',0366691234,'dungntph@fpt.edu.vn','Hn','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDw7Aw1I-FC4KkJzqHiON1gSeKVb54XzwRw&usqp=CAU')" +
+                "");
 
 
         sqLiteDatabase.execSQL("create table HangSanPham (" +
@@ -39,11 +48,11 @@ public class DbHelper extends SQLiteOpenHelper {
                 "diaChiHang TEXT not null," +
                 "anhHang text not null)");
         sqLiteDatabase.execSQL("insert into HangSanPham values " +
-                "(1,'APPLE','Nam Tu Liem - Ha Noi','linkanh')," +
-                "(2,'SAMSUNG','Nho Quan - Ninh Binh','linkanh')," +
-                "(3,'XIAOMI','Nam Tu Liem - Ha Noi','linkanh')," +
-                "(4,'VIVO','Nam Tu Liem - Ha Noi','linkanh')," +
-                "(5,'OPPO','Nam Tu Liem - Ha Noi','linkanh')");
+                "(1,'APPLE','Nam Tu Liem - Ha Noi','https://yt3.googleusercontent.com/WoDkWmAjQ5Dbw-ccjqFku8ThK2UYcqaOqq25PBE9eGb_S-vsqxiKU2kL2kZJVz_BcAMv3WUWsA=s900-c-k-c0x00ffffff-no-rj')," +
+                "(2,'SAMSUNG','Nho Quan - Ninh Binh','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1vv60lRXEgKNg25DFs2YymtVvZ1CC-ul4wCSBM_EoEa1qw3AbqL8o64hOZd7lpObWeJk&usqp=CAU')," +
+                "(3,'XIAOMI','Nam Tu Liem - Ha Noi','https://www.movilzona.es/app/uploads-movilzona.es/2020/07/xiaomi-logo-y-fondo-degradado.jpg')," +
+                "(4,'VIVO','Nam Tu Liem - Ha Noi','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfMW4kaQoFEXOAJO4O8BfZTbhTB0PKNSL0tw&usqp=CAU')," +
+                "(5,'OPPO','Nam Tu Liem - Ha Noi','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9z9J4sFsWZP4Q7gOHtpZjzX_rN4svdLngLA&usqp=CAU')");
 
         sqLiteDatabase.execSQL("create table SanPham (" +
                 "maSp integer primary key autoincrement," +
@@ -55,11 +64,11 @@ public class DbHelper extends SQLiteOpenHelper {
                 "anhSp text not null ," +
                 "mota Text not null)");
         sqLiteDatabase.execSQL("insert into SanPham values " +
-                "(1,'IPHONE 15 PRO MAX',35000000,123,'sale30%',1,'linkanh','sale')," +
-                "(2,'VIVO X NOTE',20000000,12,'Khong',4,'linkanh','sale')," +
-                "(3,'IPHONE 13 PRO MAX',20000000,23,'sale30%',1,'linkanh','sale')," +
-                "(4,'IPHONE 15 PRO ',30000000,79,'khong',1,'linkanh','sale')," +
-                "(5,'SAMSUNG GALAXY S23',15000000,68,'sale30%',2,'link anh','sale')");
+                "(1,'IPHONE 15 PRO MAX',35000000,123,'sale',1,'https://cdn.hoanghamobile.com/i/preview/Uploads/2023/09/13/iphone-15-pro-max-white-titanium-pure-back-iphone-15-pro-max-white-titanium-pure-front-2up-screen-usen.png','qưewqewqe')," +
+                "(2,'VIVO X NOTE',20000000,12,'Khong',4,'https://lequanmobile.com/wp-content/uploads/2023/04/VIVO-X-NOTE-BLACK-.png','qưewqew')," +
+                "(3,'IPHONE 13 PRO MAX',20000000,23,'sale',1,'https://cdn.viettelstore.vn/Images/Product/ProductImage/1896556097.jpeg','qưewqewqe')," +
+                "(4,'IPHONE 15 PRO ',30000000,79,'khong',1,'https://cdn.viettelstore.vn/Images/Product/ProductImage/1896556097.jpeg','qưewqewqe')," +
+                "(5,'SAMSUNG GALAXY S23',15000000,68,'sale',2,'https://images.samsung.com/is/image/samsung/assets/vn/2201/preorder/1_image_carousel/2_group_kv2/S21FE_Carousel_GroupKV2_MO.jpg','qưewqewqewqe')");
 
         sqLiteDatabase.execSQL("create table GioHang (" +
                 "maGio integer primary key autoincrement," +
@@ -78,15 +87,14 @@ public class DbHelper extends SQLiteOpenHelper {
                 "maDon integer primary key autoincrement," +
                 "ngayLap date not null," +
                 "trangThaiDon text not null," +
-                "pTVanChuyen text not null," +
-                "maGio integer references GioHang(maGio), " +
-                "maNv text references NhanVien(maNv) )");
+                "maGio integer references GioHang(maGio)," +
+                "maKh text references KhachHang(maKh) )");
         sqLiteDatabase.execSQL("insert into DonHang values " +
-                "(1,'20/09/2023','Dang doi don vi van chuyen','Van chuyen tan nha',2,'NV01')," +
-                "(2,'20/09/2023','Dang van chuyen','Hoa Toc',3,'NV01')," +
-                "(3,'20/09/2023','Da goi hang','Khong',1,'NV01')," +
-                "(4,'20/09/2023','Dang doi don vi van chuyen','Van chuyen tan nha',5,'NV01')," +
-                "(5,'20/09/2024','Dang van chuyen','Van chuyen tan nha',4,'NV01')");
+                "(1,'20/09/2023','Đang vận chuyển',1,'KH01')," +
+                "(2,'20/09/2023','Đang vận chuyển',2,'KH01')," +
+                "(3,'20/09/2023','Đang vận chuyển',5,'KH01')," +
+                "(4,'20/09/2023','Đang vận chuyển',3,'KH01')," +
+                "(5,'20/09/2024','Đang vận chuyển',4,'KH01')");
 
     }
 

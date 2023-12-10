@@ -95,7 +95,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edAnhNv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:hint="Link ảnh nhân viên"
             android:inputType="text" />
 
